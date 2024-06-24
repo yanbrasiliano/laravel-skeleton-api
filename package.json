@@ -4,5 +4,12 @@
   },
   "scripts": {
     "postinstall": "husky install"
+  },
+   "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
+      "pre-commit": "echo \"[Husky] pre-commit\"",
+      "pre-push": "echo \"[Husky] pre-push\""
+    }
   }
 }
