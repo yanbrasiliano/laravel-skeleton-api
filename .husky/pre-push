@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run phpstan
+./vendor/bin/phpstan
+if [ $? -ne 0 ]; then
+  echo "Oops! PHPSTAN went wrong here. Fix it before continuing... 😉"
+  exit 1
+fi
+
+# run the tests
+php artisan test --parallel | php
+if [ $? -ne 0 ]; then
+  echo "Oops! Some test went wrong here. Fix it before continuing... 😉"
+  exit 1
+fi
+
+exit 0

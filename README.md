@@ -7,7 +7,7 @@ This project is a base for developing an API using Laravel 11, but with the dire
 
 - Docker
 - Docker Compose
-- 
+  
 ## Environment Setup
 
 1. **Clone the repository:**
