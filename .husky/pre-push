@@ -2,7 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # Run phpstan
-./vendor/bin/phpstan
+./vendor/bin/phpstan analyse
 if [ $? -ne 0 ]; then
   echo "Oops! PHPSTAN went wrong here. Fix it before continuing... 😉"
   exit 1
