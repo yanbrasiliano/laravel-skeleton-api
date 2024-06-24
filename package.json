@@ -3,9 +3,10 @@
     "husky": "^9.0.11"
   },
   "scripts": {
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepare": "husky"
   },
-   "husky": {
+  "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
       "pre-commit": "echo \"[Husky] pre-commit\"",
