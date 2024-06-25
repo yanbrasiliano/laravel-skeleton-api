@@ -5,9 +5,9 @@ This project is a base for developing an API using Laravel 11, but with the dire
 
 ## To Do
 
-- [] Set the husky to work automatically with the hooks: pre-commit, pre-push, and commit-msg.
-- [] Basic API authentication with sanctum.
-- [] Unit and feature testing.
+- [ ] Set the husky to work automatically with the hooks: pre-commit, pre-push, and commit-msg.
+- [ ] Basic API authentication with sanctum.
+- [ ] Unit and feature testing.
 
 ## Prerequisites
 
