@@ -21,3 +21,13 @@
 2024-06-24 20:28:33,895 INFO reaped unknown pid 120 (exit status 0)
 2024-06-24 20:29:22,128 INFO reaped unknown pid 204 (exit status 0)
 2024-06-24 20:29:33,176 INFO reaped unknown pid 399 (exit status 0)
+2024-06-25 17:58:07,103 WARN received SIGQUIT indicating exit request
+2024-06-25 17:58:07,110 INFO waiting for nginx, php-fpm to die
+2024-06-25 17:58:07,127 INFO stopped: php-fpm (exit status 0)
+2024-06-25 17:58:07,136 INFO stopped: nginx (exit status 0)
+2024-06-25 18:39:33,258 INFO Set uid to user 0 succeeded
+2024-06-25 18:39:33,260 INFO supervisord started with pid 1
+2024-06-25 18:39:34,265 INFO spawned: 'nginx' with pid 7
+2024-06-25 18:39:34,267 INFO spawned: 'php-fpm' with pid 8
+2024-06-25 18:39:35,338 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-06-25 18:39:35,338 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

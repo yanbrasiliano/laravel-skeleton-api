@@ -3,6 +3,12 @@
 
 This project is a base for developing an API using Laravel 11, but with the directory structure of Laravel 10. It includes a Docker development environment configured with Nginx, PHP-FPM, PostgreSQL, Mailpit, Mailhog, and Laravel Pint for code formatting. Feel free to change the database as well as the web server to test the endpoints.
 
+## To Do
+
+- [] Set the husky to work automatically with the hooks: pre-commit, pre-push, and commit-msg.
+- [] Basic API authentication with sanctum.
+- [] Unit and feature testing.
+
 ## Prerequisites
 
 - Docker
@@ -66,6 +72,42 @@ To run Pint manually:
 
 ```sh
 docker-compose exec app ./vendor/bin/pint
+```
+
+## Husky, Larastan, and Pint
+
+This project uses Husky to manage Git hooks, ensuring that tests, Larastan, and Pint are run before commits. This helps maintain code quality and adherence to coding standards.
+
+### Installing Husky
+
+Husky is installed and configured automatically. Only run ```npm i``` to install packages.  However, if you need to install it manually, you can do so with the following steps:
+
+1. **Install Husky:**
+
+   ```sh
+   npm install husky --save-dev
+   ```
+
+2. **Activate Git hooks:**
+
+   ```sh
+   npx husky install
+   ```
+
+### Running Husky Manually
+
+To run Husky hooks manually:
+
+```sh
+npx husky run pre-commit
+```
+
+### Running Larastan Manually
+
+To run Larastan manually:
+
+```sh
+docker-compose exec skeleton-api ./vendor/bin/phpstan
 ```
 
 ## Useful Commands
