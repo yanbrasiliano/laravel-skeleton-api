@@ -1,15 +1,12 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-# Run phpstan
-./vendor/bin/phpstan analyse
+# Run phpstan inside Docker container
+docker exec -i skeleton-api ./vendor/bin/phpstan analyse
 if [ $? -ne 0 ]; then
   echo "Oops! PHPSTAN went wrong here. Fix it before continuing... 😉"
   exit 1
 fi
 
-# run the tests
-php artisan test --parallel | php
+# Run the tests inside Docker container
+docker exec -i skeleton-api php artisan test --parallel | docker exec -i skeleton-api php
 if [ $? -ne 0 ]; then
   echo "Oops! Some test went wrong here. Fix it before continuing... 😉"
   exit 1

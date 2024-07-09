@@ -2,40 +2,40 @@
 
 return [
 
-  'defaults' => [
-    'guard' => 'api',
-    'passwords' => 'users',
-  ],
-
-  'guards' => [
-    'web' => [
-      'driver' => 'session',
-      'provider' => 'users',
+    'defaults' => [
+        'guard'     => 'api',
+        'passwords' => 'users',
     ],
 
-    'api' => [
-      'driver' => 'token',
-      'provider' => 'users',
-      'hash' => false,
-    ],
-  ],
+    'guards' => [
+        'web' => [
+            'driver'   => 'session',
+            'provider' => 'users',
+        ],
 
-  'providers' => [
-    'users' => [
-      'driver' => 'eloquent',
-      'model' => App\Models\User::class,
+        'api' => [
+            'driver'   => 'token',
+            'provider' => 'users',
+            'hash'     => false,
+        ],
     ],
-  ],
 
-  'passwords' => [
-    'users' => [
-      'provider' => 'users',
-      'table' => 'password_resets',
-      'expire' => 60,
-      'throttle' => 60,
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model'  => App\Models\User::class,
+        ],
     ],
-  ],
 
-  'password_timeout' => 10800,
+    'passwords' => [
+        'users' => [
+            'provider' => 'users',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+            'throttle' => 60,
+        ],
+    ],
+
+    'password_timeout' => 10800,
 
 ];
