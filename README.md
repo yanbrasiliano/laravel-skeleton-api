@@ -1,13 +1,7 @@
 
-# Laravel 11 Skeleton API
+# Laravel 11 Skeleton API with Laravel 10 Directory Structure
 
 This project is a base for developing an API using Laravel 11, but with the directory structure of Laravel 10. It includes a Docker development environment configured with Nginx, PHP-FPM, PostgreSQL, Mailpit, Mailhog, and Laravel Pint for code formatting. Feel free to change the database as well as the web server to test the endpoints.
-
-## To Do
-
-- [ ] Set the husky to work automatically with the hooks: pre-commit, pre-push, and commit-msg.
-- [ ] Basic API authentication with sanctum.
-- [ ] Unit and feature testing.
 
 ## Prerequisites
 
